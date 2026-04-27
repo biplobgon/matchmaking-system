@@ -29,6 +29,17 @@ The system optimizes several goals at once:
 4. Policy layer selects a match, logs decision context, and emits assignment.
 5. Post-match pipeline updates ratings and computes quality labels.
 
+## Current Repo Implementation
+
+The repository implements a compact version of this architecture:
+
+- `scripts/download_data.py` downloads the public Lichess dataset.
+- `notebooks/01_lichess_matchmaking_eda.ipynb` profiles rating balance, outcomes, and engagement proxies.
+- `notebooks/02_matchmaking_modeling_and_policy.ipynb` trains baseline models and compares matchmaking policies offline.
+- `src/matchmaking_system/elo.py` contains Elo expected-score and rating-update logic.
+- `src/matchmaking_system/policies.py` scores candidate pairs using fairness, wait time, latency, and engagement.
+- `src/matchmaking_system/simulation.py` compares random, closest-skill, and multi-objective policies.
+
 ## Rating Model
 
 Start with Elo because it is transparent and interview-friendly:

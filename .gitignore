@@ -5,6 +5,10 @@ __pycache__/
 .ruff_cache/
 .venv/
 venv/
+data/raw/
+data/processed/
+models/
+reports/figures/
 dist/
 build/
 *.egg-info/

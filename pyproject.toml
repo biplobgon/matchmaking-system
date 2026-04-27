@@ -11,9 +11,18 @@ dependencies = []
 
 [project.optional-dependencies]
 dev = [
+    "jupyterlab>=4.0",
+    "matplotlib>=3.8",
+    "numpy>=1.26",
+    "pandas>=2.1",
     "pytest>=8.0",
+    "scikit-learn>=1.4",
+    "seaborn>=0.13",
 ]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
