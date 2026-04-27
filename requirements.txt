@@ -1,0 +1,11 @@
+-e .
+
+jupyterlab>=4.0
+ipykernel>=6.29
+matplotlib>=3.8
+numpy>=1.26
+pandas>=2.1
+pywin32>=306; platform_system == "Windows"
+pytest>=8.0
+scikit-learn>=1.4
+seaborn>=0.13

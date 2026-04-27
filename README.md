@@ -71,7 +71,16 @@ Why chess works for this portfolio project:
 ## Quick Start
 
 ```bash
-python -m pip install -e ".[dev]"
+uv venv
+uv pip install -r requirements.txt
+.venv\Scripts\python scripts\download_data.py
+.venv\Scripts\python -m pytest
+```
+
+If you already have Python on your PATH, this also works:
+
+```bash
+python -m pip install -r requirements.txt
 python scripts/download_data.py
 pytest
 ```
@@ -79,8 +88,10 @@ pytest
 Open the notebooks after downloading the data:
 
 ```bash
-jupyter lab notebooks/
+.venv\Scripts\python -m jupyter lab notebooks/
 ```
+
+On Windows synced folders such as Google Drive, Jupyter may raise `SetFileSecurity: Access is denied` when starting a kernel. If that happens, run `$env:JUPYTER_ALLOW_INSECURE_WRITES='1'` in the same PowerShell session before launching Jupyter, or move the repo to a non-synced local folder.
 
 ## Portfolio Story
 

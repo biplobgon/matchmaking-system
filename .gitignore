@@ -1,6 +1,7 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
+pytest-cache-files-*/
 .mypy_cache/
 .ruff_cache/
 .venv/
@@ -9,6 +10,7 @@ data/raw/
 data/processed/
 models/
 reports/figures/
+tmp/
 dist/
 build/
 *.egg-info/
